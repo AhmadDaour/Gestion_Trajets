@@ -1,0 +1,79 @@
+# .gitignore
+
+# ===== SECURITE - Fichiers sensibles =====
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+credentials.json
+secrets.json
+
+# ===== Environnements virtuels =====
+venv/
+env/
+ENV/
+.venv/
+
+# ===== Cache Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ===== IDE et éditeurs =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# ===== Streamlit =====
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# ===== Base de données =====
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+
+# ===== Logs et fichiers temporaires =====
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+
+# ===== Dépendances lock files optionnels =====
+poetry.lock
+package-lock.json
+
+# ===== Tests =====
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ===== OS =====
+Thumbs.db
+.AppleDouble
+.LSOverride
