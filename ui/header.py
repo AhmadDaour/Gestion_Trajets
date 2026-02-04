@@ -1,10 +1,6 @@
 import streamlit as st
 import streamlit.components.v1 as components
-from datetime import datetime
-
-class Style:
-    @staticmethod
-    def afficher_titre_application():
+def header():
         components.html("""
         <style>
         .card {
@@ -41,18 +37,3 @@ class Style:
             </div>
         </div>
         """, height=200)
-    @staticmethod
-    def afficher_formulaire_saisie():
-        with st.sidebar:
-            st.header("Saisie des données du trajet")
-            with st.form("saisie_trajet"):
-                distance = st.number_input("Distance (km)", min_value=0.0)
-                date = st.date_input("Date", datetime.today())
-                prix = st.number_input("Prix (€)", min_value=0.0)
-                ajouter = st.form_submit_button("Ajouter")
-            if ajouter:
-                return {"distance": distance, "date": date, "prix": prix, "submit": True}
-        return {"submit": False}
-    @staticmethod
-    def ajouter_separateur():
-        st.markdown('</div><div class="form-section">', unsafe_allow_html=True)
