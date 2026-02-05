@@ -1,6 +1,6 @@
 import streamlit as st
 import sys 
-from ui.header import header
+from ui.main_page import header
 from ui.sidebar import show_form
 
 sys.dont_write_bytecode = True
