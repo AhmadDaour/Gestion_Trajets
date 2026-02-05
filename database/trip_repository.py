@@ -5,8 +5,6 @@ class TripRepository:
     def save(self, trip_data: dict) -> bool:
         try:
             response = supabase.table("trajets").insert(trip_data).execute()
-
-            # Si on arrive ici, c'est que l'insertion a réussi
             return len(response.data) > 0
 
         except APIError as e:
