@@ -5,7 +5,7 @@ from services.fuel_service import FuelService
 from database.trip_repository import TripRepository
 from database.fuel_repository import FuelRepository
 
-def show_form():
+def render_sidebar():
     with st.sidebar:
         st.header("Ajouter un trajet:")
         with st.form("saisie_trajet"):
