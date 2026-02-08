@@ -13,7 +13,7 @@ SUPABASE_KEY = os.environ.get("SUPABASE_KEY")
 if not SUPABASE_URL:
     raise ValueError("SUPABASE_URL n'est pas défini dans le fichier .env")
 if not SUPABASE_KEY:
-    raise ValueError("SUPABASE_ANON_KEY n'est pas défini dans le fichier .env")
+    raise ValueError("SUPABASE_KEY n'est pas défini dans le fichier .env")
 
 # Créer le client Supabase
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)

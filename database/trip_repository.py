@@ -15,4 +15,14 @@ class TripRepository:
             print(f"Exception lors de la sauvegarde : {str(e)}")
             return False
 
+    def get_trips(self) -> list[dict]:
+        try:
+            response = supabase.table("trajets").select("*").execute()
+            return response.data
+        except APIError as e:
+            print(f"Erreur Supabase : {e.message}")
+            return []
+        except Exception as e:
+            print(f"Exception lors de la récupération : {str(e)}")
+            return []
 
