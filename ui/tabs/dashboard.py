@@ -9,10 +9,8 @@ def render_dashboard():
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        KPICard("Chiffre d'affaires", total_ca, "💰", "#06131F", label_color="#079FEB").render()
-
+        KPICard(label="Chiffre d'affaires", value=total_ca, icon="💰", background_color="#454748", text_color="#E6F8EDDF").render()
     with col2:
-        KPICard("Dépenses carburant", total_fuels, "⛽", "#2196F3", label_color="#F6071B").render()
-
+        KPICard(label="Dépenses carburant", value=total_fuels, icon="⛽", background_color="#2196F3", text_color="#F6071B").render()
     with col3:
-        KPICard("Bénéfices", total_benef, "📈", "#2196F3", label_color="#29EB07").render()
+        KPICard(label="Bénéfices", value=total_benef, icon="📈", background_color="#2196F3", text_color="#29EB07").render()
