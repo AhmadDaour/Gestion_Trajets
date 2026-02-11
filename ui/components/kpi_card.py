@@ -36,43 +36,50 @@ class KPICard:
         try:
             # Injection du CSS avec une largeur à 100%
             st.markdown(
-                f"""
-                <style>
-                .{self.unique_id} {{
-                    background-color: {self.background_color} !important;
-                    color: {self.text_color} !important;
-                    padding: 16px !important;
-                    border-radius: {self.border_radius}px !important;
-                    width: 100% !important;  /* Occupe toute la largeur */
-                    height: {self.height}px !important;
-                    display: flex !important;
-                    flex-direction: column !important;
-                    justify-content: center !important;
-                    align-items: center !important;
-                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
-                    margin: 10px auto !important;
-                    font-family: sans-serif !important;
-                    border: 1px solid {self.border_color} !important;
-                    overflow: hidden !important;
-                    box-sizing: border-box !important;  /* Inclut le padding dans la largeur */
-                }}
-                .{self.unique_id} .kpi-label {{
-                    display: flex !important;
-                    align-items: center !important;
-                    justify-content: center !important;
-                    gap: 8px !important;
-                    margin-bottom: 10px !important;
-                    font-size: 16px !important;
-                    font-weight: 500 !important;
-                }}
-                .{self.unique_id} .kpi-value {{
-                    font-size: 24px !important;
-                    font-weight: bold !important;
-                }}
-                </style>
-                """,
-                unsafe_allow_html=True,
-            )
+            f"""
+            <style>
+            .{self.unique_id} {{
+                background-color: {self.background_color} !important;
+                color: {self.text_color} !important;
+                padding: 16px !important;
+                border-radius: {self.border_radius}px !important;
+                width: 100% !important;
+                height: {self.height}px !important;
+                display: flex !important;
+                flex-direction: column !important;
+                justify-content: center !important;
+                align-items: center !important;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+                margin: 10px auto !important;
+                font-family: sans-serif !important;
+                border: 1px solid {self.border_color} !important;
+                overflow: hidden !important;
+                box-sizing: border-box !important;
+                transition: all 0.3s ease !important;  /* Animation fluide */
+            }}
+            .{self.unique_id}:hover {{
+                transform: translateY(-5px) !important;  /* Lève légèrement la carte */
+                box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2) !important;  /* Ombre plus marquée */
+                border-color: {self.text_color} !important;  /* Changement de couleur de bordure */
+            }}
+            .{self.unique_id} .kpi-label {{
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                gap: 8px !important;
+                margin-bottom: 10px !important;
+                font-size: 16px !important;
+                font-weight: 500 !important;
+            }}
+            .{self.unique_id} .kpi-value {{
+                font-size: 24px !important;
+                font-weight: bold !important;
+            }}
+            </style>
+            """,
+            unsafe_allow_html=True,
+        )
+
 
             # Si une colonne est fournie, afficher dans cette colonne
             if col:
