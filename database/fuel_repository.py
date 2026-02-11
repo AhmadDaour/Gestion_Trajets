@@ -31,7 +31,7 @@ class FuelRepository:
         
     def get_last_fuel(self):
         response = (
-            supabase.table("fuels")
+            supabase.table("carburants")
             .select("*")
             .order("date", desc=True)
             .order("id", desc=True)
