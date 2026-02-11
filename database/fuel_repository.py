@@ -1,4 +1,5 @@
 from database.supabase_client import supabase
+from models.fuel import Fuel
 from postgrest.exceptions import APIError
 
 class FuelRepository:
@@ -27,5 +28,29 @@ class FuelRepository:
         except Exception as e:
             print(f"Exception lors de la récupération : {str(e)}")
             return []
+        
+    def get_last_fuel(self):
+        response = (
+            supabase.table("fuels")
+            .select("*")
+            .order("date", desc=True)
+            .order("id", desc=True)
+            .limit(1)
+            .execute()
+        )
 
+        data = response.data
+
+        if not data:
+            return None
+
+        row = data[0]
+
+        return Fuel(
+            prix_total=row["prix_total"],
+            date=row["date"],
+            prix_litre=row["prix_litre"],
+            nb_litre=row["nb_litre"],
+            consommation_moyenne_par_km=row["consommation_moyenne_par_km"],
+        )
 
