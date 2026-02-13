@@ -1,7 +1,7 @@
 import streamlit as st
 from ui.components.header import render_header
 from ui.components.pro_tabs import pro_tabs
-from ui.sidebar import render_sidebar
+from onglets.sidebar import render_general_form
 from utils.injection_css_global import _inject_global_styles
 
 
@@ -14,7 +14,7 @@ class MainPage:
 
     def render(self):
         # Sidebar
-        render_sidebar()
+        render_general_form()
 
         # Header
         render_header()
