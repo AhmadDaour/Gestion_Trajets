@@ -1,0 +1,38 @@
+/* Espace avant le titre */
+.block-container {
+    padding-top: 0rem;
+}   
+
+/* Container centré pour la card */
+.header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+/* Card principale */
+.header-card {
+    border-top: 7px solid #3B82F6;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Titre de la card */
+.header-card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #2563EB;
+}
+
+/* Contenu de la card */
+.header-card-content {
+    margin-top: 0rem;
+    color: #4B5563;
+}
