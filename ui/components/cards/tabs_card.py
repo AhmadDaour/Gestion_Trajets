@@ -1,5 +1,5 @@
 import streamlit as st
-from ui.tabs.dashboard import render_dashboard
+from onglets.dashboard import render_dashboard
 
 def pro_tabs():
     custom_css = """

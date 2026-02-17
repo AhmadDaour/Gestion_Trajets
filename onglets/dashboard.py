@@ -1,6 +1,6 @@
 import streamlit as st
 from services.dashboard_service import DashboardService
-from ui.components.kpi_card import KPICard
+from ui.components.cards.kpi_card import KPICard
 
 
 def render_dashboard():

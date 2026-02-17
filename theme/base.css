@@ -1,0 +1,134 @@
+/* ========================================
+VARIABLES DESIGN SYSTEM
+======================================== */
+
+:root {
+
+    --color-primary: #2563EB;
+
+    --color-background: #F9FAFB;
+
+    --color-surface: #FFFFFF;
+
+    --color-text: #111827;
+
+    --color-text-secondary: #6B7280;
+
+    --radius: 8px;
+
+    --transition: 0.2s ease;
+
+}
+
+
+/* ========================================
+STRUCTURE GLOBALE APP
+======================================== */
+
+html, body, [data-testid="stAppViewContainer"] {
+
+    background-color: var(--color-background);
+
+    color: var(--color-text);
+
+}
+
+
+/* container principal */
+
+.main .block-container {
+
+    padding-top: 1.5rem;
+
+    padding-bottom: 2rem;
+
+    max-width: 1200px;
+
+}
+
+
+/* ========================================
+TYPOGRAPHIE
+======================================== */
+
+h1, h2, h3 {
+
+    font-weight: 600;
+
+    letter-spacing: -0.02em;
+
+}
+
+h1 {
+
+    font-size: 32px;
+
+}
+
+h2 {
+
+    font-size: 24px;
+
+}
+
+p {
+
+    color: var(--color-text-secondary);
+
+}
+
+
+/* ========================================
+CORRECTIONS STREAMLIT
+======================================== */
+
+/* supprimer padding top automatique */
+
+[data-testid="stAppViewContainer"] {
+
+    padding-top: 0;
+
+}
+
+
+/* enlever outline boutons */
+
+button {
+
+    border-radius: var(--radius);
+
+}
+
+
+/* ========================================
+UTILITAIRES
+======================================== */
+
+.text-center {
+
+    text-align: center;
+
+}
+
+.mt-1 {
+
+    margin-top: 1rem;
+
+}
+
+.mb-1 {
+
+    margin-bottom: 1rem;
+
+}
+
+
+/* ========================================
+ANIMATIONS GLOBAL
+======================================== */
+
+* {
+
+    transition: var(--transition);
+
+}
