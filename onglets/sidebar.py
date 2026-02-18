@@ -10,7 +10,6 @@ def render_general_form():
 
     with st.sidebar:
 
-        st.header("Ajouter un trajet")
         trip_data = render_trip_form()
 
         if trip_data:
@@ -22,7 +21,6 @@ def render_general_form():
             else:
                 st.error(result["message"])
 
-        st.header("Ajouter un plein")
         fuel_data = render_fuel_form()
 
         if fuel_data:

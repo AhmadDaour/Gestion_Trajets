@@ -2,6 +2,13 @@ import streamlit as st
 from datetime import datetime
 
 def render_trip_form():
+    st.markdown(
+    """
+    <div class="sidebar-form">
+        <h3 class="sidebar-form-title">Ajouter un trajet</h3>
+    """,
+    unsafe_allow_html=True
+)
     with st.form("saisie_trajet"):
         distance = st.number_input("Distance (km)", min_value=0.0)
         date = st.date_input("Date", datetime.today())
@@ -14,5 +21,5 @@ def render_trip_form():
             "date": date,
             "prix": prix
         }
-
+    st.markdown('</div>', unsafe_allow_html=True)
     return None

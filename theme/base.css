@@ -6,15 +6,16 @@ VARIABLES DESIGN SYSTEM
 
     --color-primary: #2563EB;
 
-    --color-background: #F9FAFB;
+    --color-background: white;
 
-    --color-surface: #FFFFFF;
+    --color-surface: #F3F4F6;
 
     --color-text: #111827;
 
-    --color-text-secondary: #6B7280;
+    --color-text-secondary:  #CBD5E1;
 
     --radius: 8px;
+
 
     --transition: 0.2s ease;
 
@@ -55,7 +56,7 @@ h1, h2, h3 {
 
     font-weight: 600;
 
-    letter-spacing: -0.02em;
+    letter-spacing: 0.02em;
 
 }
 
