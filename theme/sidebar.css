@@ -1,0 +1,48 @@
+/* Container des titres de formulaire */
+.sidebar-form-title {
+
+    margin-top: 0 !important;
+    padding-bottom: 2px !important;
+    padding-top: 2px !important;
+    margin-bottom: 0px !important;
+    font-size: 16px !important;
+    line-height: 0.4 !important;
+    color: blue !important;
+}
+
+/* Fond global sidebar */
+[data-testid="stSidebar"] {
+
+    background-color: #1E293B !important;
+
+}
+
+/* Container de chaque formulaire */
+.sidebar-form {
+
+    background-color: #F3F4F6 !important;
+    padding: 15px !important;
+    margin-bottom: 15px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+    color: white !important;
+}
+
+
+/* Boutons */
+[data-testid="stSidebar"] button {
+
+    background-color: #2563EB !important; 
+    color: white !important;
+    border-radius: 8px;
+    width: 100%;
+
+}
+
+
+/* Inputs */
+[data-testid="stSidebar"] input {
+
+    border-radius: 8px;
+
+}
