@@ -1,19 +1,19 @@
 import streamlit as st
+from pathlib import Path
+
+
 def inject_css():
 
-    files = [
-        "theme/base.css",
-        "theme/cards.css",
-        "theme/variables.css",
-        "theme/sidebar.css",
-        "theme/tabs.css",
-    ]
+    css_dir = Path("theme")
 
-    for file in files:
+    css = ""
 
-        with open(file) as f:
+    for file in sorted(css_dir.glob("*.css")):
 
-            st.markdown(
-                f"<style>{f.read()}</style>",
-                unsafe_allow_html=True
-            )
+        css += file.read_text() + "\n"
+
+
+    st.markdown(
+        f"<style>{css}</style>",
+        unsafe_allow_html=True
+    )
