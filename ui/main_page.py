@@ -3,7 +3,7 @@ from services.dashboard_service import DashboardService
 from services.fuel_service import FuelService
 from services.trip_service import TripService   
 from ui.components.cards.header_card import render_header
-from ui.components.cards.tabs_card import pro_tabs
+from ui.components.cards.tabs_card import render_tabs
 from onglets.sidebar import render_general_form
 
 
@@ -28,4 +28,4 @@ class MainPage:
         )
 
         # Tabs
-        pro_tabs()
+        render_tabs()
