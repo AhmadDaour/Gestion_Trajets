@@ -9,12 +9,12 @@ def render_fuel_form():
     """,
     unsafe_allow_html=True
 )
-    with st.form("saisie_plein"):
-        prix_total = st.number_input("Prix total (€)", min_value=0.0)
+    with st.form("saisie_plein", clear_on_submit=True):
+        prix_total = st.number_input("Prix total (€)", min_value=0.0, format="%.3f")
         date = st.date_input("Date du plein", datetime.today())
-        prix_litre = st.number_input("Prix par litre (€)", min_value=0.0)
-        nb_litre = st.number_input("Nombre de litres (L)", min_value=0.0)
-        consommation = st.number_input("Consommation moyenne par km (L/km)", min_value=0.0)
+        prix_litre = st.number_input("Prix par litre (€)", min_value=0.0, format="%.3f")
+        nb_litre = st.number_input("Nombre de litres (L)", min_value=0.0, format="%.3f")
+        consommation_moyenne_par_km = st.number_input("Consommation moyenne par km (L/km)", min_value=0.0, value=0.053, format="%.3f")
         submit = st.form_submit_button("Ajouter le plein")
 
     if submit:
@@ -23,7 +23,7 @@ def render_fuel_form():
             "date": date,
             "prix_litre": prix_litre,
             "nb_litre": nb_litre,
-            "consommation": consommation
+            "consommation_moyenne_par_km": consommation_moyenne_par_km
         }
 
     st.markdown('</div>', unsafe_allow_html=True)
