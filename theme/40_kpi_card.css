@@ -1,0 +1,89 @@
+/* styles/kpi.css */
+/* Variables CSS */
+:root {
+  --border-color: #E5E7EB;
+  --card-bg: #ffffff;
+  --icon-bg: #EFF6FF;
+  --label-color: #6B7280;
+  --value-color: #111827;
+}
+
+/* Conteneur principal du KPI */
+.kpi-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  transition: all 0.25s ease;
+  width: 100%; /* Prend toute la largeur de son conteneur parent */
+  box-sizing: border-box;
+}
+
+/* Conteneur avec bordure arrondie pour chaque carte */
+.kpi-container {
+  background-color: gray !important; /* Fond clair pour le conteneur */
+  border-radius: 16px; /* Bordure plus arrondie que la carte */
+  padding: 12px; /* Espacement entre le bord et la carte */
+  margin: 8px; /* Espacement autour du conteneur */
+  box-sizing: border-box;
+  width: 100%; /* Prend toute la largeur disponible */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Ombre légère pour le relief */
+}
+
+/* Hover */
+.kpi-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Icône */
+.kpi-icon {
+  font-size: 20px;
+  padding: 6px;
+  border-radius: 8px;
+  background-color: var(--icon-bg);
+  flex-shrink: 0;
+}
+
+/* Contenu */
+.kpi-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+/* Label */
+.kpi-label {
+  color: var(--label-color);
+  font-size: clamp(10px, 2vw, 14px);
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+/* Valeur */
+.kpi-value {
+  color: var(--value-color);
+  font-weight: 700;
+  font-size: clamp(14px, 3vw, 26px);
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+/* Pour les écrans moyens et grands */
+@media (min-width: 600px) {
+  .kpi-card {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .kpi-icon {
+    font-size: 24px;
+    padding: 8px;
+  }
+}
