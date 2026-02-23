@@ -1,14 +1,18 @@
 import streamlit as st
 from services.dashboard_service import DashboardService
 from ui.components.cards.kpi_card import KPICard
+from core.core_ui import UI
 
 
 def render_dashboard():
     kpis = DashboardService().get_kpis()
-    col1, col2, col3 = st.columns(3)  
-    with col1:
-        KPICard("Chiffre d'affaires", kpis.total_ca, "💰").render(col1) 
-    with col2:
-        KPICard("Total Carburants", kpis.total_carburant, "⛽️").render(col2)
-    with col3:
-        KPICard("Bénéfices", kpis.benefice_total, "📈").render(col3)
+    kpi_list = [
+        ("Chiffre d'affaires", kpis.total_ca, "€", "💰"),
+        ("Total Carburants", kpis.total_carburant, "€", "⛽️"),
+        ("Bénéfices", kpis.benefice_total, "€", "📈")
+    ]
+    cols = st.columns(len(kpi_list))
+
+    for i, (label, value, unit, icon) in enumerate(kpi_list):
+        formatted_value = UI.format_value(value, unit)  # formatage FR centralisé
+        KPICard(label, formatted_value, icon).render(cols[i])
