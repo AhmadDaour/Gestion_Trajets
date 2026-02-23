@@ -18,11 +18,13 @@ class DashboardService:
         total_fuels = Calculations.total_fuels(fuels) + history.historique_carburants
         dernier_plein = self.fuel_repo.get_last_fuel().prix_total
         total_distance = Calculations.total_distance(trips)
+        benefice_net = Calculations.benefice_net(trips)
 
         return DashboardKPIs(
             total_ca=total_ca,
             total_carburant=total_fuels,
             benefice_total=total_ca - total_fuels,
             dernier_plein=dernier_plein,
-            total_distance=total_distance
+            total_distance=total_distance,
+            benefice_net=benefice_net
         )

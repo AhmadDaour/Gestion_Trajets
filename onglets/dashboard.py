@@ -9,9 +9,10 @@ def render_dashboard():
     kpi_list = [
         ("Chiffre d'affaires", kpis.total_ca, "€", "💰"),
         ("Achat Carburants", kpis.total_carburant, "€", "⛽️"),
-        ("Bénéfices", kpis.benefice_total, "€", "📈"),
+        ("Bénéfice brut", kpis.benefice_total, "€", "📈"),
         ("Dernier plein", kpis.dernier_plein, "€", "🛢️"),
-        ("Total distance", kpis.total_distance, "km", "🛣️")
+        ("Total distance", kpis.total_distance, "km", "🛣️"),
+        ("Bénéfice net", kpis.benefice_net, "€", "💰")
     ]
     cols_per_row = 3
     for i in range(0, len(kpi_list), cols_per_row):
