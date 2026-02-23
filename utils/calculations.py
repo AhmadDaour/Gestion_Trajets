@@ -6,6 +6,10 @@ class Calculations:
         return sum(trip["prix"] for trip in trips)
     
     @staticmethod
+    def benefice_net(trips: list[dict]) -> float:
+        return sum(trip["benefice"] for trip in trips)
+    
+    @staticmethod
     def total_distance(trips: list[dict]) -> int:
         return sum(trip["distance"] for trip in trips)
     
