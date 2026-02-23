@@ -9,7 +9,7 @@ def render_trip_form():
     """,
     unsafe_allow_html=True
 )
-    with st.form("saisie_trajet"):
+    with st.form("saisie_trajet", clear_on_submit=True):
         distance = st.number_input("Distance (km)", min_value=0.0)
         date = st.date_input("Date", datetime.today())
         prix = st.number_input("Prix (€)", min_value=0.0)

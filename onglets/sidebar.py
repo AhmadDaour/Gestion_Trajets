@@ -13,8 +13,8 @@ def render_general_form():
         trip_data = render_trip_form()
 
         if trip_data:
-            service = TripService(TripRepository())
-            result = service.add_trip(**trip_data)
+            service_trip = TripService(TripRepository())
+            result = service_trip.add_trip(**trip_data)
 
             if result["status"] == "success":
                 st.success(result["message"])
@@ -24,10 +24,10 @@ def render_general_form():
         fuel_data = render_fuel_form()
 
         if fuel_data:
-            service = FuelService(FuelRepository())
-            result = service.add_fuel(**fuel_data)
+            service_fuel = FuelService(FuelRepository())
+            result = service_fuel.add_fuel(**fuel_data)
 
-            if result["status"] == "success":
+            if result["status"] == "success":       
                 st.success(result["message"])
             else:
                 st.error(result["message"])

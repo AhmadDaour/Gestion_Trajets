@@ -26,15 +26,7 @@ class KPICard:
         self.unique_id = f"kpi-card-{uuid.uuid4().hex[:8]}"
 
     def render(self, col=None):
-        """
-        Affiche la carte KPI dans une colonne Streamlit.
-
-        Args:
-            col: Objet colonne Streamlit (ex: `st.columns([1, 1])[0]`).
-                 Si None, la carte occupera toute la largeur disponible.
-        """
         try:
-            # Injection du CSS avec une largeur à 100%
             st.markdown(
             f"""
             <style>
@@ -91,7 +83,7 @@ class KPICard:
                                 {self.icon} <span>{self.label}</span>
                             </div>
                             <div class="kpi-value">
-                                {self.value:,.2f} {self.currency}
+                                {self.value}
                             </div>
                         </div>
                         """,
