@@ -4,8 +4,8 @@
   --border-color: #E5E7EB;
   --card-bg: #ffffff;
   --icon-bg: #EFF6FF;
-  --label-color: #6B7280;
-  --value-color: #111827;
+  --label-color: white;
+  --value-color: white;
 }
 
 /* Conteneur principal du KPI */
