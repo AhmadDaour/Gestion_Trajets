@@ -1,11 +1,10 @@
 import streamlit as st
 from services.dashboard_service import DashboardService
-from ui.components.cards.kpi_card import KPICard
+from ui.components.cards.dashboard_kpi_card import DashboardKPICard
 from core.core_ui import UI
-import math
 
 def render_dashboard():
-    kpis = DashboardService().get_kpis()
+    kpis = DashboardService().get_dashboard_kpis()
     kpi_list = [
         ("Chiffre d'affaires", kpis.total_ca, "€", "💰"),
         ("Achat Carburants", kpis.total_carburant, "€", "⛽️"),
@@ -21,4 +20,4 @@ def render_dashboard():
 
         for j, (label, value, unit, icon) in enumerate(row_kpis):
             formatted_value = UI.format_value(value, unit)
-            KPICard(label, formatted_value, icon).render(cols[j])
+            DashboardKPICard(label, formatted_value, icon).render(cols[j])

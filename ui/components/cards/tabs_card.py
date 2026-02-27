@@ -1,13 +1,13 @@
 import streamlit as st
 from onglets.dashboard import render_dashboard
+from onglets.services import render_services
 
 def render_tabs():
 
-    tab1, tab2 = st.tabs(["Dashboard", "Historiques"])
+    tab1, tab2 = st.tabs(["Dashboard", "Services"])
 
     with tab1:
         render_dashboard()
 
     with tab2:
-        st.markdown("### Historiques")
-        st.write("À venir : Historique des données et analyses.")
+        render_services()

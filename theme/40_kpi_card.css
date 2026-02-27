@@ -1,30 +1,57 @@
 /* styles/kpi.css */
 /* Variables CSS */
 :root {
-  --border-color: #E5E7EB;
-  --card-bg: #ffffff;
-  --icon-bg: #EFF6FF;
-  --label-color: white;
-  --value-color: white;
-}
+  --background: #0F172A;
 
+  --card-bg: #1E293B;
+  --border-color: #334155;
+  --icon-bg: #020617;
+
+  --label-color: #94A3B8;
+  --value-color: #F1F5F9;
+
+  --primary: #3B82F6;
+  --primary-hover: #2563EB;
+
+  --card-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
 /* Conteneur principal du KPI */
 .kpi-card {
+
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px;
-  border-radius: 12px;
+  gap: 12px;
+
+  padding: 16px;
+
+  border-radius: 10px;
+
   border: 1px solid var(--border-color);
+
   background-color: var(--card-bg);
-  transition: all 0.25s ease;
-  width: 100%; /* Prend toute la largeur de son conteneur parent */
+
+  width: 100%;
   box-sizing: border-box;
+
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+
+.kpi-card:hover {
+
+  border-color: #334155;
+
+  background-color: #263244;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+
 }
 
 /* Conteneur avec bordure arrondie pour chaque carte */
 .kpi-container {
-  background-color: gray !important; /* Fond clair pour le conteneur */
+  background-color: #F3F4F6 !important; /* Fond clair pour le conteneur */
   border-radius: 16px; /* Bordure plus arrondie que la carte */
   padding: 12px; /* Espacement entre le bord et la carte */
   margin: 8px; /* Espacement autour du conteneur */
@@ -33,11 +60,6 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Ombre légère pour le relief */
 }
 
-/* Hover */
-.kpi-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
 
 /* Icône */
 .kpi-icon {

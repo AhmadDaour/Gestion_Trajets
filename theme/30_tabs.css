@@ -1,7 +1,7 @@
 :root {
         --tab-bg: rgba(255, 255, 255, 0.04);
         --tab-border: rgba(255, 255, 255, 0.08);
-        --tab-text: #2563EB;
+        --tab-text: #2563EB !important;
         --tab-text-hover: rgba(255, 255, 255, 0.9);
         --tab-active-bg: linear-gradient(135deg, #2563EB, #1D4ED8);
         --tab-active-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);

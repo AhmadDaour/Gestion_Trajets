@@ -3,22 +3,10 @@ VARIABLES DESIGN SYSTEM
 ======================================== */
 
 :root {
-
-    --color-primary: #2563EB;
-
-    --color-background: white;
-
-    --color-surface: #F3F4F6;
-
-    --color-text: #111827;
-
-    --color-text-secondary:  #CBD5E1;
-
+    --color-background: #0F172A;
+    --color-text-secondary: #64748B;
     --radius: 8px;
-
-
     --transition: 0.2s ease;
-
 }
 
 
@@ -27,11 +15,8 @@ STRUCTURE GLOBALE APP
 ======================================== */
 
 html, body, [data-testid="stAppViewContainer"] {
-
     background-color: var(--color-background);
-
-    color: var(--color-text);
-
+    color: var(--color-text-secondary);
 }
 
 
@@ -52,25 +37,6 @@ html, body, [data-testid="stAppViewContainer"] {
 TYPOGRAPHIE
 ======================================== */
 
-h1, h2, h3 {
-
-    font-weight: 600;
-
-    letter-spacing: 0.02em;
-
-}
-
-h1 {
-
-    font-size: 32px;
-
-}
-
-h2 {
-
-    font-size: 24px;
-
-}
 
 p {
 

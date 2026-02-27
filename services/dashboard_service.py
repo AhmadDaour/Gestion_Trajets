@@ -10,7 +10,7 @@ class DashboardService:
         self.fuel_repo = FuelRepository()
         self.history_repo = HistoricalRepository()
 
-    def get_kpis(self):
+    def get_dashboard_kpis(self):
         trips = self.trip_repo.get_trips()
         fuels = self.fuel_repo.get_fuels()
         history = self.history_repo.get_totals()

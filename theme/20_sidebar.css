@@ -12,9 +12,7 @@
 
 /* Fond global sidebar */
 [data-testid="stSidebar"] {
-
     background-color: #1E293B !important;
-
 }
 
 /* Container de chaque formulaire */
@@ -42,7 +40,5 @@
 
 /* Inputs */
 [data-testid="stSidebar"] input {
-
     border-radius: 8px;
-
 }

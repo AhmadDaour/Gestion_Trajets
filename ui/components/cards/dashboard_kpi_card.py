@@ -1,7 +1,7 @@
 import streamlit as st
 import uuid
 
-class KPICard:
+class DashboardKPICard:
     def __init__(
         self,
         label: str,

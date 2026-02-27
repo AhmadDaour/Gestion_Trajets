@@ -1,4 +1,5 @@
 from database.supabase_client import supabase
+from datetime import datetime
 from postgrest.exceptions import APIError
 
 class TripRepository:
@@ -26,3 +27,14 @@ class TripRepository:
             print(f"Exception lors de la récupération : {str(e)}")
             return []
 
+    def get_ca_today(self) -> float:
+        try:
+            today = datetime.now().date()
+            response = supabase.table("trajets").select("prix").gte("date", today).execute()
+            return sum(item['prix'] for item in response.data)
+        except APIError as e:
+            print(f"Erreur Supabase : {e.message}")
+            return 0.0
+        except Exception as e:
+            print(f"Exception lors de la récupération du CA : {str(e)}")
+            return 0.0
