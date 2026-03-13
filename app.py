@@ -1,6 +1,6 @@
 import streamlit as st
 import sys 
-from theme.inject_css import inject_css
+from theme.load_css import load_css
 from ui.main_page import MainPage
 
 sys.dont_write_bytecode = True
@@ -10,7 +10,7 @@ st.set_page_config(
     layout="wide"
 )
 
-inject_css()
+load_css()
 main_page = MainPage()
 main_page.render()
 

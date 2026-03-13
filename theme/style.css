@@ -1,0 +1,150 @@
+/* ================================
+   VARIABLES
+================================ */
+:root {
+    --bg-color:  #f8f9fa;
+    --text-color: #212529;
+    --form-bg: white;
+    --border-color: #dee2e6;
+    --primary-color: #3b82f6;
+    --sidebar-bg: #f8f9fa;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --text-color: #e1e1e1;
+        --form-bg: #1e1e1e;
+        --border-color: #444;
+        --primary-color: #60a5fa;
+        --sidebar-bg: #1e1e1e;
+    }
+}
+
+@media (min-width: 768px) {
+    .header-container {
+        margin-top: 0rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .header-container {
+        margin-top: 0rem;
+    }
+}
+
+/* ================================
+   GLOBAL STYLES
+================================ */
+
+[data-testid="stAppViewContainer"]{
+background: var(--bg-color);
+}
+
+/* ================================
+   TITRE PRINCIPAL
+================================ */
+.header-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.header-card {
+    background-color: var(--primary-color);  
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    max-width: 800px;
+    width: 75%;
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-card:hover {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.header-card-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-top: -1rem;
+    margin-bottom: -0.3rem;
+    font-family: Arial, sans-serif;
+}
+
+.header-card-content {
+    font-size: 0.84rem;
+    color: var(--text-color);
+    font-weight: 400;
+    font-family: Arial, sans-serif;
+    line-height: 1;
+}
+/* ================================
+   SIDEBAR
+================================ */
+/*Styles pour les titres dans la sidebar */
+[data-testid="stSidebar"] h1,
+[data-testid="stSidebar"] h2,
+[data-testid="stSidebar"] h3 {
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    border-radius: 8px; /* Rayon des coins pour l'effet arrondi */
+    padding: 4px 8px; /* Espacement interne pour un meilleur rendu */
+    display: block; /* Pour que le padding soit pris en compte */
+    width: 100%; /* Ajuste la largeur au contenu */
+    margin: 4px 0; /* Espacement vertical entre les labels */
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.2;
+    margin-top: 0px;
+}
+
+/* Styles pour les formulaires dans la sidebar */
+[data-testid="stSidebar"] [data-testid="stForm"] {
+    background-color: var(--form-bg);
+    padding: 9px;
+    margin-top: 6px;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+/* Styles pour les labels des champs de saisie dans les formulaires de la sidebar */
+[data-testid="stForm"] label p {
+    font-size: 0.875rem !important;
+    font-weight: bold !important;
+    color: var(--text-color) !important;
+}
+/* Styles pour les champs de saisie dans les formulaires de la sidebar */
+
+/* Supprimer les bordures natives des wrappers Streamlit */
+/* Supprimer les bordures natives de streamlit*/
+[data-testid="stForm"] *:not(input):not(textarea):not(label):not(button):not(p):not(span) {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+[data-testid="stForm"] input,
+[data-testid="stForm"] textarea {
+  border: 1px solid var(--border-color) !important;
+  border-radius: 10px !important;
+  padding: 10px 14px !important;
+  background-color: gray!important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+/* ================================
+   TABS
+================================ */
+
+
+/* ================================
+   BOUTONS GLOBAUX
+================================ */
+
+
+/* ================================
+   KPI CARDS
+================================ */

@@ -1,6 +1,6 @@
 import streamlit as st
 
-def render_header(title: str, content: str, height: int = 200):
+def render_header(title: str, content: str):
     st.markdown(f"""
     <div class="header-container">
         <div class="header-card">

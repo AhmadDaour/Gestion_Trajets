@@ -3,7 +3,7 @@ from typing import Union
 def number(value: Union[int, float, str], decimals: int = 2, thousand_sep: str = " ") -> str:
     """Format français : espace pour milliers, virgule pour décimales"""
     try:
-        num = float(value)
+        num = round(float(value), decimals)
     except (ValueError, TypeError):
         return str(value)
     formatted = f"{num:,.{decimals}f}".replace(",", "X").replace(".", ",").replace("X", thousand_sep)
