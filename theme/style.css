@@ -211,21 +211,19 @@ background: var(--bg-color);
 /* ================================
    SIDEBAR TOGGLE BUTTON
 ================================ */
-
-/* style permanent */
-[data-testid="stExpandSidebarButton"]{
+/* bouton toggle sidebar (ouvrir + fermer) */
+header [data-testid="stExpandSidebarButton"]{
     background: var(--primary-color);
     border: 1px solid var(--border-color);
     border-radius: 10px;
 }
 
-/* hover léger (optionnel) */
-[data-testid="stExpandSidebarButton"]:hover{
-    opacity: 0.85;
+/* hover */
+header [data-testid="stExpandSidebarButton"]:hover{
+    opacity: 1.0;
 }
 
-/* IMPORTANT : laisser le bouton gérer le clic */
-[data-testid="stExpandSidebarButton"] *{
+header [data-testid="stExpandSidebarButton"] *{
     pointer-events: none;
 }
 
