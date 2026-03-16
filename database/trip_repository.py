@@ -38,3 +38,27 @@ class TripRepository:
         except Exception as e:
             print(f"Exception lors de la récupération du CA : {str(e)}")
             return 0.0
+    
+    def get_distance_today(self) -> int:
+        try:
+            today = datetime.now().date()
+            response = supabase.table("trajets").select("distance").gte("date", today).execute()
+            return sum(item['distance'] for item in response.data)
+        except APIError as e:
+            print(f"Erreur Supabase : {e.message}")
+            return 0
+        except Exception as e:
+            print(f"Exception lors de la récupération de la distance : {str(e)}")
+            return 0
+        
+    def get_profit_today(self) -> float:
+        try:
+            today = datetime.now().date()
+            response = supabase.table("trajets").select("benefice").gte("date", today).execute()
+            return sum(item['benefice'] for item in response.data)
+        except APIError as e:
+            print(f"Erreur Supabase : {e.message}")
+            return 0.0
+        except Exception as e:
+            print(f"Exception lors de la récupération du bénéfice : {str(e)}")
+            return 0.0

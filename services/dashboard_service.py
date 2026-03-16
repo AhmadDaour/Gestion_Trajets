@@ -19,12 +19,17 @@ class DashboardService:
         dernier_plein = self.fuel_repo.get_last_fuel().prix_total
         total_distance = Calculations.total_distance(trips)
         benefice_net = Calculations.benefice_net(trips)
-
+        ca_jour = self.trip_repo.get_ca_today()
+        distance_jour = self.trip_repo.get_distance_today()
+        benefice_net_jour = self.trip_repo.get_profit_today()
         return DashboardKPIs(
             total_ca=total_ca,
             total_carburant=total_fuels,
             benefice_total=total_ca - total_fuels,
             dernier_plein=dernier_plein,
             total_distance=total_distance,
-            benefice_net=benefice_net
+            benefice_net=benefice_net,
+            ca_du_jour=ca_jour,
+            distance_du_jour=distance_jour,
+            benefice_net_du_jour=benefice_net_jour
         )
