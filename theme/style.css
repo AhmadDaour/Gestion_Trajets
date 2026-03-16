@@ -114,9 +114,9 @@ background: var(--bg-color);
 
 /* Styles pour les labels des champs de saisie dans les formulaires de la sidebar */
 [data-testid="stForm"] label p {
-    font-size: 0.875rem !important;
-    font-weight: bold !important;
-    color: var(--text-color) !important;
+    font-size: 0.875rem   ;
+    font-weight: bold   ;
+    color: var(--text-color)   ;
 }
 /* Styles pour les champs de saisie dans les formulaires de la sidebar */
 
@@ -136,13 +136,13 @@ background: var(--bg-color);
 
 [data-testid="stForm"] input,
 [data-testid="stForm"] textarea {
-  border: 1px solid var(--border-color) !important;
+  border: 1px solid var(--border-color)   ;
   color: var(--text-color);
   font-weight: 500;
   border-radius: 8px;
-  padding: 12px 14px !important;
-  background-color: var(--form-bg) !important;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+  padding: 12px 14px   ;
+  background-color: var(--form-bg)   ;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1)   ;
 }
 
 /* Styles pour les boutons dans les formulaires de la sidebar */
@@ -155,12 +155,12 @@ background: var(--bg-color);
 }
 
 [data-testid="stForm"] button[data-testid*="FormSubmit"]:hover {
-    opacity: 0.85 !important;
-    transform: translateY(-1px) !important;
+    opacity: 0.85   ;
+    transform: translateY(-1px)   ;
 }
 
 [data-testid="stForm"] button[data-testid*="FormSubmit"]:active {
-    transform: scale(0.98) !important;
+    transform: scale(0.98)   ;
 }
 
 [data-testid="stForm"] button[data-testid*="FormSubmit"] p {
@@ -181,3 +181,37 @@ background: var(--bg-color);
 /* ================================
    KPI CARDS
 ================================ */
+/* ================================
+   KPI CARDS (st.metric)
+================================ */
+
+[data-testid="stMetric"] {
+    background-color: var(--form-bg)   ;
+    border: 1px solid var(--border-color)   ;
+    border-radius: 12px   ;
+    padding: 16px 20px   ;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06)   ;
+    transition: box-shadow 0.2s, transform 0.2s   ;
+}
+
+[data-testid="stMetric"]:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1)   ;
+    transform: translateY(-2px)   ;
+}
+
+/* Label */
+[data-testid="stMetricLabel"] p {
+    font-size: 0.8rem   ;
+    font-weight: 600   ;
+    color: var(--text-color)   ;
+    opacity: 0.7   ;
+    text-transform: uppercase   ;
+    letter-spacing: 0.04em   ;
+}
+
+/* Valeur */
+[data-testid="stMetricValue"] div {
+    font-size: 1.5rem   ;
+    font-weight: 700   ;
+    color: var(--primary-color)   ;
+}
