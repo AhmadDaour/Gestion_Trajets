@@ -37,7 +37,7 @@ def render_historiques():
             lambda row: row.str.contains(search, case=False).any(),
             axis=1
         )]
-        
+
 
     gb = GridOptionsBuilder.from_dataframe(df)
 
@@ -51,7 +51,11 @@ def render_historiques():
     "Nombre de lignes",
     [10, 20, 50, 100],
     index=0
-)
+    )
+    gb.configure_pagination(
+        paginationAutoPageSize=False,
+        paginationPageSize=page_size
+    )
 
     grid_options = gb.build()
     grid_options["localeText"] = AGGRID_LOCALE_FR
@@ -65,10 +69,7 @@ def render_historiques():
     )
 
 
-    gb.configure_pagination(
-        paginationAutoPageSize=False,
-        paginationPageSize=page_size
-    )
+   
 
     gb.configure_selection("single")
 
