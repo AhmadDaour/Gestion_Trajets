@@ -1,0 +1,16 @@
+AGGRID_LOCALE_FR = {
+    "page": "Page",
+    "more": "Plus",
+    "to": "à",
+    "of": "sur",
+    "next": "Suivant",
+    "last": "Dernier",
+    "first": "Premier",
+    "previous": "Précédent",
+    "loadingOoo": "Chargement...",
+    "noRowsToShow": "Aucune donnée à afficher",
+    "searchOoo": "Recherche...",
+    "filterOoo": "Filtrer...",
+    "paginationPageSize": "Taille de page",
+    "pageSize": "Taille de page",
+}
