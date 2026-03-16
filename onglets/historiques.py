@@ -46,6 +46,10 @@ def render_historiques():
         filter=True,
         resizable=True
     )
+    gb.configure_column(
+    "date", 
+    sort="desc"
+    )
 
     page_size = st.selectbox(
     "Nombre de lignes",
@@ -67,9 +71,6 @@ def render_historiques():
         theme="streamlit",
         use_container_width=True
     )
-
-
-   
 
     gb.configure_selection("single")
 

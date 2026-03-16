@@ -55,10 +55,8 @@ background: var(--bg-color);
     padding: 1.5rem 2rem;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    max-width: 800px;
-    width: 75%;
+    width: 100%;
     text-align: center;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .header-card:hover {
@@ -66,8 +64,8 @@ background: var(--bg-color);
 }
 
 .header-card-title {
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 20px;
+    font-weight: bold;
     color: var(--text-color);
     margin-top: -1rem;
     margin-bottom: -0.3rem;
@@ -75,9 +73,9 @@ background: var(--bg-color);
 }
 
 .header-card-content {
-    font-size: 0.84rem;
+    font-size: 10px;
     color: var(--text-color);
-    font-weight: 400;
+    font-weight: bold;
     font-family: Arial, sans-serif;
     line-height: 1;
 }
@@ -171,7 +169,38 @@ background: var(--bg-color);
 /* ================================
    TABS
 ================================ */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    margin-top: 4rem;
+}
+.stTabs [data-baseweb="tab"] {
+    padding: 8px 16px;
+    font-weight: bold;
+    color: #888;
+    background: transparent;
+    border-bottom: 2px solid transparent;
+    border-radius: 0;
+    margin-bottom: -1px;
+}
 
+.stTabs [data-baseweb="tab"] p {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.stTabs [data-baseweb="tab"]:hover {
+    color: #2563eb;
+    background: rgba(37, 99, 235, 0.04);
+}
+.stTabs [aria-selected="true"] {
+    color: #2563eb;
+    font-weight: 500;
+    border-bottom: 2px solid #2563eb;
+}
+.stTabs [data-baseweb="tab-highlight"] {
+    display: none;
+}
 
 /* ================================
    BOUTONS GLOBAUX
@@ -201,17 +230,16 @@ background: var(--bg-color);
 
 /* Label */
 [data-testid="stMetricLabel"] p {
-    font-size: 0.8rem   ;
-    font-weight: 600   ;
+    font-size: 13px   ;
+    font-weight: bold   ;
     color: var(--text-color)   ;
     opacity: 0.7   ;
-    text-transform: uppercase   ;
     letter-spacing: 0.04em   ;
 }
 
 /* Valeur */
 [data-testid="stMetricValue"] div {
-    font-size: 1.5rem   ;
-    font-weight: 700   ;
+    font-size: 20px   ;
+    font-weight: bold   ;
     color: var(--primary-color)   ;
 }
