@@ -64,7 +64,7 @@ background: var(--bg-color);
 }
 
 .header-card-title {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: bold;
     color: var(--text-color);
     margin-top: -1rem;
@@ -73,7 +73,7 @@ background: var(--bg-color);
 }
 
 .header-card-content {
-    font-size: 10px;
+    font-size: 13px;
     color: var(--text-color);
     font-weight: bold;
     font-family: Arial, sans-serif;
